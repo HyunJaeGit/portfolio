@@ -93,7 +93,7 @@ section ul, section li {
     position: fixed;
     bottom: 50px;
     right: 100px;
-    width: 1200px;
+    width: 1300px;
     height: 550px;
     background-color: rgba(0, 0, 0, 0.7); /* 검은색 반투명 배경 */
     color: #fff; /* 글자 색을 흰색으로 설정 */
@@ -107,7 +107,6 @@ section ul, section li {
     transform-origin: bottom right;
     transition: transform 0.3s ease; /* 트랜지션 효과 추가 */
 }
-
 .session-content {
     display: flex;
     align-items: center;
@@ -115,7 +114,10 @@ section ul, section li {
     justify-content: center;
     margin: 0 auto;
 }
-
+.session-content img {
+	width: 600px;
+	height: 300px;
+}
 .session-content p {
     margin: 0;
     flex-grow: 1;

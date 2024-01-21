@@ -18,4 +18,12 @@
 		<div>　권현재</div>
 		<div class="neon-sign"></div>
 	</a>
+	<nav class="menu">
+		<ul>
+			<li><a href="#">이력서&포트폴리오</a></li>
+			<li><a href="#">팀 프로젝트</a></li>
+			<li><a href="#">개인 프로젝트</a></li>
+			<li><a href="#">갤러리</a></li>
+		</ul>
+	</nav>
 </header>

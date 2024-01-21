@@ -12,7 +12,7 @@
 				<div class="detail">
 					<h4>1. Resume and Portfolio</h4>
 					<ul>
-						<li>안녕하세요.</li>
+						<li>안녕하세요.</li><br>
 						<li>팀워크와 소통을 통해 발전하는<br> 백엔드 권현재입니다.</li>
 						<li>인간 권현재를 소개합니다.</li>
 					</ul>
@@ -38,7 +38,7 @@
 					<img src="${imgpath }/home/p1.png">
 				</div>
 				<div class="detail">
-					<h4>Resume and Portfolio</h4>
+					<h4>public Gallery</h4>
 				</div>
 			</div>
 		</div>
@@ -55,7 +55,7 @@
     <div class="session-content">
     	<div><img src="${imgpath }/home/guide.gif"></div>
         <h1>환영합니다!</h1>
-        <p>이 페이지에서는 마우스, 키보드 화살표 키, 및 버튼을 사용하여<br> 슬라이더를 제어할 수 있습니다.</p>
+        <p>이 페이지에서는 마우스 스윙 및 클릭 <br>키보드 화살표 ↔키 및 버튼을 사용할 수 있습니다.</p>
         <p>창이 10초 후 닫힙니다.</p>
         <button onclick="closeSession()">X</button>
     </div>
