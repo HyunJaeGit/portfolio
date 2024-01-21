@@ -1,0 +1,26 @@
+@charset "UTF-8";
+	.portfolio > div {
+		width: 1000px;
+		margin: 0 auto;
+	}
+	.portfolio img {
+		width: 900px;
+		box-shadow: 3px 3px 3px 5px gray;
+		border-radius: 15px;
+	}
+	.portfolio ul {
+		width: 900px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+	}
+	.portfolio li {
+		width: 1000px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 10px;
+	}
