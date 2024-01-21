@@ -19,9 +19,13 @@ setInterval(changeColor, 2000);
 
 /** 슬라이더 효과(버튼) */
 document.addEventListener('DOMContentLoaded', function () {
-	// 페이지 로드 시 실행되는 함수
-   	showWelcomeSession();
-	
+    // 사용자가 더 이상 보지 않기를 선택한 경우 세션 창을 감춥니다.
+    if (localStorage.getItem('dontShowSession') === 'true') {
+        closeSession();
+    } else {
+        showWelcomeSession();
+    }
+    
     const album = document.querySelector('.album');
     const leftButton = document.getElementById('leftButton');
     const rightButton = document.getElementById('rightButton');
@@ -107,4 +111,9 @@ function closeSession() {
     setTimeout(function () {
         sessionContainer.style.display = 'none';
     }, 300); // 트랜지션 시간보다 조금 더 긴 시간으로 딜레이
+}
+
+function dontShowAgain() {
+    localStorage.setItem('dontShowSession', 'true');
+    closeSession();
 }

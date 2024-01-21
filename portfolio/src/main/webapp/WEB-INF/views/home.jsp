@@ -57,7 +57,10 @@
         <h1>환영합니다!</h1>
         <p>이 페이지에서는 마우스 스윙 및 클릭 <br>키보드 화살표 ↔키 및 버튼을 사용할 수 있습니다.</p>
         <p>창이 10초 후 닫힙니다.</p>
-        <button onclick="closeSession()">X</button>
+        <div>
+	        <input type="checkbox" class="sessioncookie" onclick="dontShowAgain()">더 이상 보지 않기
+	        <button onclick="closeSession()">X</button>
+        </div>
     </div>
 </div>
 <script src="${cpath }/resources/js/homejs.js">

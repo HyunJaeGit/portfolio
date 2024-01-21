@@ -125,9 +125,13 @@ section ul, section li {
 
 .session-content button {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 15px;
     color: white;
     background-color: gray;
+}
+.sessioncookie {
+	color: white;
+	background-color: transparent;
 }
 
 

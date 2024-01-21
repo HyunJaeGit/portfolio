@@ -9,6 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>권현재 포트폴리오</title>
+<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic-eco.css" rel="stylesheet">
 <link rel="stylesheet" href="${csspath }/header.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
 	</a>
 	<nav class="menu">
 		<ul>
-			<li><a href="#">이력서&포트폴리오</a></li>
+			<li><a href="${cpath }/portfolio">이력서&포트폴리오</a></li>
 			<li><a href="#">팀 프로젝트</a></li>
 			<li><a href="#">개인 프로젝트</a></li>
 			<li><a href="#">갤러리</a></li>
