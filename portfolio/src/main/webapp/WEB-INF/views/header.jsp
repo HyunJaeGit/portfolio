@@ -22,9 +22,9 @@
 	<nav class="menu">
 		<ul>
 			<li><a href="${cpath }/portfolio">이력서&포트폴리오</a></li>
-			<li><a href="#">팀 프로젝트</a></li>
-			<li><a href="#">개인 프로젝트</a></li>
-			<li><a href="#">갤러리</a></li>
+			<li><a href="${cpath }/team/teamProject">팀 프로젝트</a></li>
+			<li><a href="${cpath }/side/sideProject">개인 프로젝트</a></li>
+			<li><a href="${cpath }/gallery/gallery">갤러리</a></li>
 		</ul>
 	</nav>
 </header>

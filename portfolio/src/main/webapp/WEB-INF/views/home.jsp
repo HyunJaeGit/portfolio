@@ -7,7 +7,7 @@
 		<div id="imgholder" class="album">
 			<div class="item">
 				<div class="thumnail">
-					<img src="${imgpath }/home/p1.png">
+					<a href="${cpath }/portfolio"><img src="${imgpath }/home/p1.png"></a>
 				</div>
 				<div class="detail">
 					<h4>1. Resume and Portfolio</h4>
@@ -20,7 +20,7 @@
 			</div>
 			<div class="item">
 				<div class="thumnail">
-					<img src="${imgpath }/home/p2.png">
+					<a href="${cpath }/team/teamProject"><img src="${imgpath }/home/p2.png"></a>
 				</div>
 				<div class="detail">
 					<h4>2. Team Project - MZ(맛집)</h4>
@@ -35,10 +35,15 @@
 			</div>
 			<div class="item">
 				<div class="thumnail">
-					<img src="${imgpath }/home/p1.png">
+					<a href="${cpath }/gallery/gallery"><img src="${imgpath }/gallery/gall2.png"></a>
 				</div>
 				<div class="detail">
-					<h4>public Gallery</h4>
+					<h4>3. public Gallery</h4>
+					<ul>
+						<li>개인 사진 저장소</li><br>
+						<li>- 개인적인 성과, 경험</li>
+						<li>- 이외의 여러 기록</li>
+					</ul>
 				</div>
 			</div>
 		</div>

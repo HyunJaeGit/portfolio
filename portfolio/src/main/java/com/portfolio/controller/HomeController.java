@@ -10,5 +10,8 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
+
+	@GetMapping("/portfolio")
+	public void portfolio() {}
 	
 }
