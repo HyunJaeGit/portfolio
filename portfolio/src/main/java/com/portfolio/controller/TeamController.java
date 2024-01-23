@@ -10,5 +10,10 @@ public class TeamController {
 
 	@GetMapping("/teamProject")
 	public void teamProject() {}
+
+	@GetMapping("/MZproject")
+	public void MZproject() {}
+
+	
 	
 }

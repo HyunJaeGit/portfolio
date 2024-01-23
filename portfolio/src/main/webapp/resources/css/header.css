@@ -1,54 +1,11 @@
 @charset "UTF-8";
 
-header {
-	width: 100%;
-	margin: 0 auto;
-	position: fixed;
-	display: flex;
-}
-	.logo {
-        cursor: pointer;
-		flex-direction: row;
-		gap: 10px;
-		font-size: 20px;
-	    font-family: 'Arial', sans-serif;
-	    padding: 15px;
-	    text-decoration: none;
-	    color: white;
-	}
-    /* 네온사인 스타일 적용 */
-    .neon-sign {
-        font-family: 'Arial', sans-serif;
-        content: '포트폴리오';
-        font-size: 20px;
-        color: #fff;
-        position: relative;
-        display: flex;
-    }
-
-    .neon-sign:before {
-        color: #ff1493; /* 네온 파란색 */
-        content: '포트폴';
-        animation: flicker 1s infinite alternate;
-    }
-
-    .neon-sign:after {
-        color: #c24cf6; /* 네온 초록색 */
-        content: '리오';
-        animation: flicker 1s infinite alternate-reverse;
-    }
-
-    @keyframes flicker {
-        0%, 100% {
-            opacity: 0.5;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.9);
-        }
-        50% {
-            opacity: 1;
-            text-shadow: none;
-        }
-    }
 body {
+	zoom: 100%; /* 100%로 설정하면 원래 크기를 유지합니다. */
+  -moz-transform: scale(1); /* Firefox에 대한 설정 */
+  -moz-transform-origin: 0 0; /* Firefox에 대한 설정 */
+  transform: scale(1); /* 다른 브라우저에 대한 설정 */
+  transform-origin: 0 0; /* 다른 브라우저에 대한 설정 */
   margin: 0;
   padding: 0;
   background-color: black;
@@ -58,9 +15,60 @@ body {
 section {
 	padding-top: 150px;
 }
+header {
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	display: flex;
+}
+.gohome {
+	padding: 15px;
+	padding-left: 100px;
+}
+.logo {
+       cursor: pointer;
+	flex-direction: row;
+	gap: 10px;
+	font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+   /* 네온사인 스타일 적용 */
+.neon-sign {
+    font-family: 'Arial', sans-serif;
+    content: '포트폴리오';
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    display: flex;
+}
+
+.neon-sign:before {
+    color: #ff1493; /* 네온 파란색 */
+    content: '포트폴';
+    animation: flicker 1s infinite alternate;
+}
+
+.neon-sign:after {
+    color: #c24cf6; /* 네온 초록색 */
+    content: '리오';
+    animation: flicker 1s infinite alternate-reverse;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        opacity: 0.5;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.9);
+    }
+    50% {
+        opacity: 1;
+        text-shadow: none;
+    }
+}
 
 header .menu {
-	margin-left: 770px;
+	margin-left: 800px;
 }
 header .menu ul {
 	display: flex;

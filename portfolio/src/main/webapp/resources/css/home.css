@@ -91,7 +91,7 @@ section ul, section li {
 /* 세션 설정 */
 .session-container {
     position: fixed;
-    bottom: 50px;
+    bottom: 0px;
     right: 100px;
     width: 1300px;
     height: 550px;

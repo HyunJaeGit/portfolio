@@ -15,10 +15,12 @@
 <body>
 
 <header>
-	<a class="logo" href="${cpath }/">
-		<div>　권현재</div>
-		<div class="neon-sign"></div>
-	</a>
+	<div class="gohome" style="position: fixed;">
+		<a class="logo" href="${cpath }/">
+			<span>　권현재</span>
+			<span class="neon-sign"></span>
+		</a>
+	</div>
 	<nav class="menu">
 		<ul>
 			<li><a class="link" href="${cpath }/portfolio">이력서&포트폴리오</a></li>
