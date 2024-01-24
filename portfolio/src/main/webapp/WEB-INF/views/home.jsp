@@ -37,10 +37,10 @@
 			</div>
 			<div class="item">
 				<div class="thumnail">
-					<a href="${cpath }/gallery/gallery"><img src="${imgpath }/gallery/gall2.png"></a>
+					<a href="${cpath }/gallery/gallery"><img src="${imgpath }/gallery/갤러리썸네일.png"></a>
 				</div>
 				<div class="detail">
-					<h4>3. public Gallery</h4>
+					<h4>3. 개인 Gallery</h4>
 					<ul>
 						<li>개인 사진 저장소</li><br>
 						<li>- 개인적인 성과, 경험</li>

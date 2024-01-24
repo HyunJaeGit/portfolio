@@ -1,62 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<style>
-.team_main {
-	display: flex;
-	width: 1200px;
-	flex-direction: row;
-	margin: 0 auto;
-	text-align: center;
-	padding-top: 200px;
-}
-.thumnail {
-	margin: 0 auto;
-}
-.thumnail img {
-	width: 460px;
-	height: 320px;
-	box-sizing: border-box;
-	padding: 3px;
-}
-.thumnail img:hover {
-	border: 3px solid yellow;
-	filter: contrast(150%);	
-}
-.thumnail a{
-	color: white;
-	text-decoration: none;
-	font-size: 14px;
-}
-.thumnail span a:hover {
-	color: yellow;
-}
-    /* 모달 스타일 */
-    .modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* 불투명한 배경색 설정 */
-        z-index: 1000;
-        justify-content: center;
-        align-items: center;
-    }
+<link rel="stylesheet" href="${csspath }/team.css">
 
-    #modal-content {
-        background-color: white;
-        padding: 20px;
-        border: 1px solid #ccc;
-        color: black;
-    }
-    #closeModal {
-    	cursor: pointer;
-    	color: black;
-    	font-weight: bold;
-    }
-</style>
 <section class="team_main">
 	<div id="teamP1" class="thumnail">
 		<div><a href="${cpath }/team/MZproject"><img alt="" src="${imgpath }/mz/MZ(맛집)프로젝트포트폴리오.pptx.jpg"></a></div>
@@ -67,6 +13,7 @@
 		<div><a href="#"><img src="${imgpath }/team/준비중.jpg"></a></div>
 		<span><a href="#">2. JavaEduSchool (team FourTrees) - 2023.02 예정</a></span>
 	</div>
+	
 <!-- 모달 창 -->
 <div id="myModal" class="modal" onclick="hideModal()">
     <!-- 모달 내용 -->
@@ -79,6 +26,8 @@
     </div>
 </div>
 </section>
+
+
 <script>
     function showsession() {
         // 세션에 메시지 저장
