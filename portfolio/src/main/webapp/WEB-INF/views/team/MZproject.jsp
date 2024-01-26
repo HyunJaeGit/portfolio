@@ -85,6 +85,27 @@
                 prevPage();
             }
         });
+        
+        
+        // 모바일에서 터치 이벤트 추가
+        document.getElementById("image-container").addEventListener("touchstart", handleTouchStart, false);
+        document.getElementById("image-container").addEventListener("touchend", handleTouchEnd, false);
+
+        function handleTouchStart(event) {
+            touchStartX = event.touches[0].clientX;
+        }
+
+        function handleTouchEnd(event) {
+            const touchEndX = event.changedTouches[0].clientX;
+            const swipeDistance = touchStartX - touchEndX;
+
+            // 적절한 기준으로 슬라이드 변경
+            if (swipeDistance > 50) {
+                nextPage();
+            } else if (swipeDistance < -50) {
+                // 이전 페이지로 이동할 경우 추가
+            }
+        }
     };
     
 </script>

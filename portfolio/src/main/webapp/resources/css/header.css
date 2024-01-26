@@ -88,3 +88,45 @@ header a {
 header a:hover {
 	color: yellow;
 }
+/* 아이패드 및 갤럭시 탭을 위한 미디어 쿼리 */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* 여기에 아이패드 및 갤럭시 탭에 적용될 스타일을 추가합니다. */
+}
+/* 아이폰 및 갤럭시 S폰을 위한 미디어 쿼리 */
+@media only screen and (max-width: 767px) {
+  /* 여기에 아이폰 및 갤럭시 S폰에 적용될 스타일을 추가합니다. */
+  /* 세션 설정 */
+.session-container {
+    position: fixed;
+    bottom: 0px;
+    right: 50px;
+    width: 600px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.7); /* 검은색 반투명 배경 */
+    color: #fff; /* 글자 색을 흰색으로 설정 */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000; /* 세션 창을 맨 앞으로 가져옴 */
+    transform: scale(0); /* 초기에는 크기를 0으로 설정하여 나타나는 효과를 줌 */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; /* 트랜지션 효과 추가 */
+	}
+	#leftButton {
+	position: absolute;
+	bottom: 8%;
+	left: 0;
+	height: 500px;
+	}
+	#rightButton { 
+	position: absolute;
+	bottom: 8%;
+	right: -200px;
+	height: 500px;
+	width: 150px;
+	transition: color 1s ease; /* 색상 전환에 대한 transition 설정 */	
+}
+	
+}
