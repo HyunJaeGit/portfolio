@@ -13,10 +13,14 @@
 <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic-eco.css" rel="stylesheet">
 <link rel="stylesheet" href="${csspath }/header.css">
 </head>
+
+
+
+<script src="${cpath }/resources/js/header.js"></script>
 <body>
 
-<header>
-	<div class="gohome" style="position: fixed;">
+<header class="header">
+	<div class="gohome" style="position: absolute;">
 		<a class="logo" href="${cpath }/">
 			<span>　권현재</span>
 			<span class="neon-sign"></span>
@@ -31,4 +35,3 @@
 		</ul>
 	</nav>
 </header>
-<script src="${cpath }/resources/js/header.js"></script>

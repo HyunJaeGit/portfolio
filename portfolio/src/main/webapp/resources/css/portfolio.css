@@ -1,4 +1,9 @@
 @charset "UTF-8";
+	.portfolio {
+		width: 100%;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
 	.portfolio > div {
 		width: 1000px;
 		margin: 0 auto;

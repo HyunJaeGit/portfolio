@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
- 	overflow-x: hidden;
+ 	overflow-y: hidden;
 }
 section {
 	width: 80%;
@@ -74,27 +74,36 @@ section ul, section li {
 	color: white;
 }
 #leftButton {
-	position: absolute;
-	bottom: 8%;
-	left: 0;
-	height: 500px;
+	position: fixed;
+	top: 10%;
+	left: 0%;
+	height: 80%;
+/* 	width: 10%; */
+	color: white;
+	font-size: 20px;	
+	transition: color 1s ease;
+	z-index: 1000;
 }
 #rightButton { 
-	position: absolute;
-	bottom: 8%;
-	right: 0;
-	height: 500px;
-	width: 150px;
+	position: fixed;
+	top: 10%;
+	right: 0%;
+	height: 80%;
+/* 	max-width: 10%; */
 	transition: color 1s ease; /* 색상 전환에 대한 transition 설정 */	
+	color: white;
+	font-size: 20px;
+	z-index: 1000;
+	text-align: left;
 }
 
-/* 세션 설정 */
+/* 모달 세션 설정 */
 .session-container {
     position: fixed;
-    bottom: 0px;
-    right: 100px;
-    width: 1300px;
-    height: 550px;
+    top: 12%;
+    right: 11%;
+    width: 77%;
+    height: 520px;
     background-color: rgba(0, 0, 0, 0.7); /* 검은색 반투명 배경 */
     color: #fff; /* 글자 색을 흰색으로 설정 */
     padding: 20px;

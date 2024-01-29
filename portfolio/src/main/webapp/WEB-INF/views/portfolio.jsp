@@ -5,10 +5,11 @@
 <section class="portfolio">
 <div>
 	<ul>
-		<li><img src="${imgpath }/portfolio/pf1.png"></li>
-		<li><img src="${imgpath }/portfolio/pf2.png"></li>
-		<li><img src="${imgpath }/portfolio/pf3.png"></li>
-		<li><img src="${imgpath }/portfolio/pf4.png"></li>
+		<li><img src="${imgpath }/portfolio/pf1.jpg"></li>
+		<li><img src="${imgpath }/portfolio/pf2.jpg"></li>
+		<li><img src="${imgpath }/portfolio/pf3.jpg"></li>
+		<li><img src="${imgpath }/portfolio/pf4.jpg"></li>
+		<li><img src="${imgpath }/portfolio/pf5.jpg"></li>
 	</ul>
 </div>
 

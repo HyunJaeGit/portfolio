@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
 <link rel="stylesheet" href="${csspath }/home.css">
+
 <section class="home">
 	<div class="slider">
 		<div id="imgholder" class="album">
@@ -53,16 +54,13 @@
 	<button id="leftButton" class="slider-btn">Before</button>
     <button id="rightButton" class="slider-btn">Next</button>
 </section>
-<style>
-
-</style>
 
 <!-- 세션 창 -->
 <div class="session-container" id="sessionContainer">
     <div class="session-content">
     	<div><img src="${imgpath }/home/guide.gif"></div>
         <h1>환영합니다!</h1>
-        <p>이 페이지에서는 마우스 스윙 및 클릭 <br>키보드 화살표 ↔키 및 버튼을 사용할 수 있습니다.</p>
+        <p>이 페이지에서는 마우스 스윙 및 클릭 <br>키보드 화살표 ↔키 및 버튼을 사용할 수 있습니다.<br>모바일에서는 화면 양끝을 클릭할 수 있습니다.</p>
         <p>창이 10초 후 닫힙니다.</p>
         <div>
 	        <input type="checkbox" class="sessioncookie" onclick="dontShowAgain()">더 이상 보지 않기

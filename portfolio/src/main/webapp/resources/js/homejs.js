@@ -3,10 +3,12 @@
 function changeColor() {
     // 텍스트 요소의 색상을 흰색으로 변경
     document.getElementById("rightButton").style.color = "#ffffff";
+    document.getElementById("leftButton").style.color = "#ffffff";
 
     // 0.5초 후에 투명하게 변경
     setTimeout(() => {
         document.getElementById("rightButton").style.color = "transparent";
+        document.getElementById("leftButton").style.color = "transparent";
     }, 500);
 }
 
