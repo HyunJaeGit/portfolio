@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Card } from "../../../components/common/Card";
 import { SectionTitle } from "../../../components/common/SectionTitle";
-import { problemSolvingItems } from "../../../data/home";
+import { problemSolvingItemsByLanguage } from "../../../data/home";
+import { useLanguage } from "../../../hooks/useLanguage";
 
 export function ProblemSolvingSection() {
+  const { language } = useLanguage();
+  const problemSolvingItems = problemSolvingItemsByLanguage[language];
   const [selectedTitle, setSelectedTitle] = useState(problemSolvingItems[0]?.title);
   const selectedCase = problemSolvingItems.find((item) => item.title === selectedTitle) ?? problemSolvingItems[0];
   const selectedIndex = problemSolvingItems.findIndex((item) => item.title === selectedCase.title);
@@ -22,8 +25,8 @@ export function ProblemSolvingSection() {
       <div className="container interactive-section">
         <SectionTitle
           eyebrow="Case Study"
-          title="문제 해결 사례"
-          description="비용 · 구조 · 반복 작업 개선"
+          title={language === "EN" ? "Problem-Solving Cases" : "문제 해결 사례"}
+          description={language === "EN" ? "Cost · Structure · Workflow" : "비용 · 구조 · 반복 작업 개선"}
         />
         <div className="case-layout">
           <div className="selector-list" aria-label="문제 해결 사례 선택">

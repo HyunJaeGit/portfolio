@@ -7,6 +7,7 @@ import type {
   SummaryCard,
   TimelineItem,
 } from "../types/home";
+import type { Language } from "../types/language";
 
 export const quickSummaryCards: SummaryCard[] = [
   {
@@ -54,6 +55,21 @@ export const educationItems: TimelineItem[] = [
   },
 ];
 
+export const educationItemsByLanguage: Record<Language, TimelineItem[]> = {
+  KR: educationItems,
+  EN: [
+    {
+      title: "B.S. in Energy and Mineral Resources Engineering",
+      organization: "Dong-A University",
+      period: "2013.03 ~ 2021.02",
+    },
+    {
+      title: "Kyungnam High School",
+      period: "2010.03 ~ 2013.01",
+    },
+  ],
+};
+
 export const trainingItems: TimelineItem[] = [
   {
     title: "AWS 클라우드 활용 웹 융합 SW 개발자 양성과정",
@@ -68,6 +84,24 @@ export const trainingItems: TimelineItem[] = [
     description: "프로그래밍 기초, 웹 개발 기초, 데이터베이스 학습",
   },
 ];
+
+export const trainingItemsByLanguage: Record<Language, TimelineItem[]> = {
+  KR: trainingItems,
+  EN: [
+    {
+      title: "AWS Cloud-Based Web Convergence SW Developer Training",
+      organization: "KG ITBANK",
+      period: "2023.07 ~ 2024.01 / 720h",
+      description: "Java, Spring, AWS, and web development training",
+    },
+    {
+      title: "IT Integrated Development Foundation Course",
+      organization: "KG ITBANK",
+      period: "2023.03 ~ 2023.06 / 360h",
+      description: "Programming fundamentals, web basics, and database training",
+    },
+  ],
+};
 
 export const problemSolvingItems: ProblemSolvingItem[] = [
   {
@@ -90,12 +124,46 @@ export const problemSolvingItems: ProblemSolvingItem[] = [
   },
 ];
 
+export const problemSolvingItemsByLanguage: Record<Language, ProblemSolvingItem[]> = {
+  KR: problemSolvingItems,
+  EN: [
+    {
+      title: "AI API Cost",
+      problem: "Frequent AI API calls increased operating costs",
+      solution: "Invoked Gemini only on server-state changes",
+      result: "Reduced API costs by about 90%",
+    },
+    {
+      title: "Legacy Data Structure",
+      problem: "Review images had limited extensibility",
+      solution: "Separated image records into a dedicated table",
+      result: "Enabled multi-image upload structure",
+    },
+    {
+      title: "Custom Tooling",
+      problem: "Repeated work in game assets and exam study",
+      solution: "Built Pixel Art Editor and examMaker as practical tools",
+      result: "Turned repeated workflows into usable tools",
+    },
+  ],
+};
+
 export const certificationItems = [
   "컴퓨터활용능력 2급 / 대한상공회의소",
   "워드프로세서 1급 / 대한상공회의소",
   "ITQ 정보기술자격 / 한국생산성본부",
   "자동차운전면허 2종 보통 / 경찰청",
 ];
+
+export const certificationItemsByLanguage: Record<Language, string[]> = {
+  KR: certificationItems,
+  EN: [
+    "Computer Specialist in Spreadsheet & Database Level 2 / KCCI",
+    "Word Processor Level 1 / KCCI",
+    "ITQ Information Technology Qualification / KPC",
+    "Driver's License Class 2 / Korean National Police Agency",
+  ],
+};
 
 export const contactContent: ContactContent = {
   eyebrow: "Contact",
@@ -108,6 +176,23 @@ export const contactContent: ContactContent = {
   resumeAction: {
     label: "Resume PDF 다운로드",
     href: "#",
+  },
+};
+
+export const contactContentByLanguage: Record<Language, ContactContent> = {
+  KR: contactContent,
+  EN: {
+    eyebrow: "Contact",
+    title: "Project Records & Contact",
+    description: "GitHub · Email · Resume",
+    email: "guswo1118@gmail.com",
+    location: "Seoul, Korea",
+    githubLabel: "HyunJaeGit",
+    githubHref: "https://github.com/HyunJaeGit",
+    resumeAction: {
+      label: "Resume (PDF)",
+      href: "#",
+    },
   },
 };
 
@@ -146,3 +231,24 @@ export const resumeSnapshotItems: ResumeSnapshotItem[] = [
     description: "한국지질자원연구원 연구실 보조",
   },
 ];
+
+export const resumeSnapshotItemsByLanguage: Record<Language, ResumeSnapshotItem[]> = {
+  KR: resumeSnapshotItems,
+  EN: [
+    {
+      title: "Education",
+      value: "Dong-A Univ.",
+      description: "B.S. in Energy and Mineral Resources Engineering",
+    },
+    {
+      title: "Training",
+      value: "1,080h",
+      description: "KG ITBANK software development training",
+    },
+    {
+      title: "Work",
+      value: "Research",
+      description: "Research support at KIGAM",
+    },
+  ],
+};

@@ -11,9 +11,9 @@ export const navigationItemsByLanguage: Record<Language, NavigationItem[]> = {
   { label: "연락처", targetId: "contact" },
   ],
   EN: [
-    { label: "Intro", targetId: "intro" },
+    { label: "About", targetId: "intro" },
     { label: "Projects", targetId: "projects" },
-    { label: "Cases", targetId: "problem-solving" },
+    { label: "Case Studies", targetId: "problem-solving" },
     { label: "Skills", targetId: "skills" },
     { label: "Resume", targetId: "background" },
     { label: "Contact", targetId: "contact" },

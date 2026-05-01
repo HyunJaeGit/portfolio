@@ -1,6 +1,8 @@
 import type { Project } from "../types/project";
+import type { Language } from "../types/language";
 
-export const projects: Project[] = [
+export const projectsByLanguage: Record<Language, Project[]> = {
+  KR: [
   {
     id: "mz-food",
     title: "MZ 맛집 플랫폼",
@@ -67,4 +69,61 @@ export const projects: Project[] = [
       { label: "GitHub", href: "https://github.com/HyunJaeGit" },
     ],
   },
-];
+  ],
+  EN: [
+    {
+      id: "mz-food",
+      title: "MZ Restaurant Platform",
+      subtitle: "Restaurant search and review service for international visitors",
+      role: "Legacy Web / AWS Deployment",
+      techStack: ["Java 8", "Spring MVC", "Oracle DB", "AWS EC2", "AWS RDS", "AWS S3"],
+      features: ["Search / Filter / Review", "Image upload and bookmarks", "Map API and ranking"],
+      achievements: ["Built and deployed the service on AWS", "Separated image storage from review data for scalability"],
+      links: [
+        { label: "Portfolio", href: "#" },
+        { label: "GitHub", href: "https://github.com/HyunJaeGit" },
+      ],
+    },
+    {
+      id: "aura3d",
+      title: "Aura3D",
+      subtitle: "On-demand server monitoring with Java 21 Virtual Threads and Gemini AI",
+      role: "Modern Backend / 3D Visualization",
+      techStack: ["Java 21", "Spring Boot", "Virtual Threads", "Gemini API", "React", "Three.js"],
+      features: ["On-demand server scanning", "State-change based AI calls", "3D failure-state visualization"],
+      achievements: ["Reduced AI API costs by about 90%", "Turned log-heavy monitoring into a 3D experience"],
+      links: [
+        { label: "Portfolio", href: "#" },
+        { label: "GitHub", href: "https://github.com/HyunJaeGit" },
+      ],
+    },
+    {
+      id: "pixel-art-editor",
+      title: "Pixel Art Editor",
+      subtitle: "A pixel art production tool used in fan-game asset work",
+      role: "Creative Tooling / Frontend",
+      techStack: ["React", "Canvas", "TypeScript", "Editor UX"],
+      features: ["Pixel-level editing", "Sprite production", "Game asset workflow support"],
+      achievements: ["Built a tool for an actual production need", "Used for fan-game resource creation"],
+      links: [
+        { label: "Open", href: "https://hyunjaegit.github.io/pixelcraft16/" },
+        { label: "GitHub", href: "https://github.com/HyunJaeGit" },
+      ],
+    },
+    {
+      id: "exam-maker",
+      title: "examMaker",
+      subtitle: "A question management tool used for certification exam study",
+      role: "Learning Productivity / Web Tool",
+      techStack: ["React", "TypeScript", "Local Data", "Study Tool"],
+      features: ["Question authoring", "Study data management", "Repeat-practice workflow"],
+      achievements: ["Used during actual exam preparation", "Turned a personal study routine into a tool"],
+      links: [
+        { label: "Open", href: "https://hyunjaegit.github.io/ExamMaker/" },
+        { label: "GitHub", href: "https://github.com/HyunJaeGit" },
+      ],
+    },
+  ],
+};
+
+export const projects = projectsByLanguage.KR;

@@ -1,6 +1,8 @@
 import type { HeroContent } from "../types/hero";
+import type { Language } from "../types/language";
 
-export const heroContent: HeroContent = {
+export const heroContentByLanguage: Record<Language, HeroContent> = {
+  KR: {
   eyebrow: "Backend-Oriented Problem Solver",
   headline: "경험을 확장해온 Java/Spring 백엔드 개발자",
   headlineLines: ["경험을 확장해온", "Java/Spring", "백엔드 개발자"],
@@ -26,4 +28,34 @@ export const heroContent: HeroContent = {
     { value: "AWS", label: "EC2 / RDS / S3 배포 경험" },
   ],
   highlights: ["유지보수와 신규 개발 모두 경험", "필요한 툴을 직접 제작", "운영 흐름까지 고려한 구현"],
+  },
+  EN: {
+    eyebrow: "Backend-Focused Problem Solver",
+    headline: "Growing through Java/Spring Backend Development",
+    headlineLines: ["Growing through", "Java/Spring", "Backend Development"],
+    name: "HyunJae Kwon",
+    description:
+      "Started with Java 8 team development and AWS deployment, then advanced into Java 21 backend systems, Aura3D, AI optimization, 3D visualization, and custom tools.",
+    primaryAction: {
+      label: "View Projects",
+      targetId: "projects",
+    },
+    secondaryAction: {
+      label: "GitHub",
+      href: "https://github.com/HyunJaeGit",
+    },
+    thirdAction: {
+      label: "3D Career Showcase",
+    },
+    techTags: ["Java 8 → 21", "Spring", "AWS", "3D Visualization", "Tooling"],
+    metrics: [
+      { value: "Java 8→21", label: "From legacy stack to modern backend" },
+      { value: "Aura3D", label: "3D monitoring UX and AI optimization" },
+      { value: "Custom Tools", label: "Pixel Art Editor / examMaker" },
+      { value: "AWS", label: "EC2 / RDS / S3 deployment" },
+    ],
+    highlights: ["Maintenance and new development", "Custom tools built for real use", "Implementation with operational context"],
+  },
 };
+
+export const heroContent = heroContentByLanguage.KR;

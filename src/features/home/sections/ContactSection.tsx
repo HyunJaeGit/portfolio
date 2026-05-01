@@ -1,9 +1,13 @@
 import { Button } from "../../../components/common/Button";
 import { Card } from "../../../components/common/Card";
 import { SectionTitle } from "../../../components/common/SectionTitle";
-import { contactContent } from "../../../data/home";
+import { contactContentByLanguage } from "../../../data/home";
+import { useLanguage } from "../../../hooks/useLanguage";
 
 export function ContactSection() {
+  const { language } = useLanguage();
+  const contactContent = contactContentByLanguage[language];
+
   return (
     <section className="section content-section content-section--last" id="contact">
       <div className="container contact-grid">
@@ -35,7 +39,7 @@ export function ContactSection() {
           </dl>
           <div className="card-actions">
             <Button as="a" href={contactContent.githubHref} target="_blank" rel="noreferrer">
-              GitHub 확인
+              {language === "EN" ? "View GitHub" : "GitHub 확인"}
             </Button>
             <Button as="a" href={contactContent.resumeAction.href} variant="secondary">
               {contactContent.resumeAction.label}

@@ -3,20 +3,40 @@ import { createPortal } from "react-dom";
 import { Button } from "../../../components/common/Button";
 import { Card } from "../../../components/common/Card";
 import { SectionTitle } from "../../../components/common/SectionTitle";
-import { certificationItems, educationItems, resumeSnapshotItems, trainingItems } from "../../../data/home";
-import { experiences } from "../../../data/experiences";
+import {
+  certificationItemsByLanguage,
+  educationItemsByLanguage,
+  resumeSnapshotItemsByLanguage,
+  trainingItemsByLanguage,
+} from "../../../data/home";
+import { experiencesByLanguage } from "../../../data/experiences";
+import { useLanguage } from "../../../hooks/useLanguage";
 
 export function ResumeSnapshotSection() {
+  const { language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const resumeSnapshotItems = resumeSnapshotItemsByLanguage[language];
+  const educationItems = educationItemsByLanguage[language];
+  const trainingItems = trainingItemsByLanguage[language];
+  const experiences = experiencesByLanguage[language];
+  const certificationItems = certificationItemsByLanguage[language];
+  const text = {
+    title: language === "EN" ? "Education · Training · Work" : "학력 · 교육 · 근무 이력",
+    description: language === "EN" ? "Education · Training · Experience" : "Education · Training · Work",
+    viewAll: language === "EN" ? "View Full Resume" : "전체 이력 보기",
+    viewDetail: language === "EN" ? "Education · training · experience details" : "학력 · 교육 · 근무 경력 자세히 보기",
+    close: language === "EN" ? "Close" : "닫기",
+    modalTitle: language === "EN" ? "Full Resume" : "전체 이력",
+  };
   const resumeModal = isOpen
     ? createPortal(
-        <div className="resume-modal" role="dialog" aria-modal="true" aria-label="전체 이력">
+        <div className="resume-modal" role="dialog" aria-modal="true" aria-label={text.modalTitle}>
           <div className="resume-modal__backdrop" onClick={() => setIsOpen(false)} />
           <Card className="resume-modal__panel">
             <div className="resume-modal__header">
-              <h3>전체 이력</h3>
+              <h3>{text.modalTitle}</h3>
               <button type="button" onClick={() => setIsOpen(false)}>
-                닫기
+                {text.close}
               </button>
             </div>
             <div className="resume-modal__content">
@@ -76,8 +96,8 @@ export function ResumeSnapshotSection() {
       <div className="container interactive-section">
         <SectionTitle
           eyebrow="Resume"
-          title="학력 · 교육 · 근무 이력"
-          description="Education · Training · Work"
+          title={text.title}
+          description={text.description}
         />
         <div className="resume-snapshot-panel">
           <div className="resume-snapshot-grid">
@@ -93,10 +113,10 @@ export function ResumeSnapshotSection() {
             className="resume-overlay-button"
             type="button"
             onClick={() => setIsOpen(true)}
-            aria-label="전체 이력 보기"
+            aria-label={text.viewAll}
           >
-            <strong>전체 이력 보기</strong>
-            <span>학력 · 교육 · 근무 경력 자세히 보기</span>
+            <strong>{text.viewAll}</strong>
+            <span>{text.viewDetail}</span>
           </button>
         </div>
         {resumeModal}

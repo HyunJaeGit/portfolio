@@ -21,7 +21,7 @@ export function GlobalHeader() {
           <LanguageToggle />
           <ThemeToggle />
           <Button variant="secondary" size="sm" onClick={handleCareerViewClick}>
-            3D 커리어관
+            {language === "EN" ? "3D Career Showcase" : "3D 커리어관"}
           </Button>
         </div>
       </div>

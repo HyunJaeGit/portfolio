@@ -3,22 +3,25 @@ import { Badge } from "../../../components/common/Badge";
 import { Button } from "../../../components/common/Button";
 import { Card } from "../../../components/common/Card";
 import { SectionTitle } from "../../../components/common/SectionTitle";
-import { projects } from "../../../data/projects";
+import { projectsByLanguage } from "../../../data/projects";
+import { useLanguage } from "../../../hooks/useLanguage";
 import type { LinkItem } from "../../../types/common";
 import { scrollToSection } from "../../../utils/scrollToSection";
 
-function handleProjectLink(link: LinkItem) {
+function handleProjectLink(link: LinkItem, language: "KR" | "EN") {
   if (link.targetId) {
     scrollToSection(link.targetId);
     return;
   }
 
   if (link.href === "#") {
-    window.alert("포트폴리오 상세 링크는 추후 연결 예정입니다.");
+    window.alert(language === "EN" ? "Portfolio detail link will be connected later." : "포트폴리오 상세 링크는 추후 연결 예정입니다.");
   }
 }
 
 export function ProjectsSection() {
+  const { language } = useLanguage();
+  const projects = projectsByLanguage[language];
   const [selectedProjectId, setSelectedProjectId] = useState(projects[0]?.id);
   const selectedProject = projects.find((project) => project.id === selectedProjectId) ?? projects[0];
   const selectedIndex = projects.findIndex((project) => project.id === selectedProject.id);
@@ -37,8 +40,8 @@ export function ProjectsSection() {
       <div className="container interactive-section">
         <SectionTitle
           eyebrow="Projects"
-          title="대표 프로젝트"
-          description="Java 8 유지보수부터 Java 21 신규 개발, 제작 툴까지"
+          title={language === "EN" ? "Featured Projects" : "대표 프로젝트"}
+          description={language === "EN" ? "From Java 8 development to Java 21 backend systems and custom tools" : "Java 8 유지보수부터 Java 21 신규 개발, 제작 툴까지"}
         />
         <div className="selector-tabs" aria-label="프로젝트 선택">
           {projects.map((project) => (
@@ -85,7 +88,7 @@ export function ProjectsSection() {
                 ) : (
                   <Button
                     variant={index === 0 ? "primary" : "secondary"}
-                    onClick={() => handleProjectLink(link)}
+                    onClick={() => handleProjectLink(link, language)}
                     key={link.label}
                   >
                     {link.label}

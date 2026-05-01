@@ -1,13 +1,20 @@
 import { Badge } from "../../../components/common/Badge";
 import { Button } from "../../../components/common/Button";
 import { Card } from "../../../components/common/Card";
-import { heroContent } from "../../../data/hero";
+import { heroContentByLanguage } from "../../../data/hero";
 import { profile } from "../../../data/profile";
+import { useLanguage } from "../../../hooks/useLanguage";
 import { scrollToSection } from "../../../utils/scrollToSection";
 
 export function HeroSection() {
+  const { language } = useLanguage();
+  const heroContent = heroContentByLanguage[language];
   const handleCareerViewClick = () => {
-    window.alert("3D 커리어 전시관은 다음 단계에서 구현될 예정입니다.");
+    window.alert(
+      language === "EN"
+        ? "The 3D Career Showcase will be added in the next phase."
+        : "3D 커리어 전시관은 다음 단계에서 구현될 예정입니다.",
+    );
   };
 
   return (
@@ -47,7 +54,7 @@ export function HeroSection() {
           <Card className="profile-card">
             <div className="profile-card__header">
               <div>
-                <h2 className="profile-card__name">{profile.name}</h2>
+                <h2 className="profile-card__name">{language === "EN" ? profile.englishName : profile.name}</h2>
                 <p className="profile-card__role">{profile.role}</p>
               </div>
               <div className="profile-card__avatar" aria-hidden="true">

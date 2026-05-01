@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Badge } from "../../../components/common/Badge";
 import { Card } from "../../../components/common/Card";
 import { SectionTitle } from "../../../components/common/SectionTitle";
-import { skillCategories } from "../../../data/skills";
+import { skillCategoriesByLanguage } from "../../../data/skills";
+import { useLanguage } from "../../../hooks/useLanguage";
 
 export function SkillsSection() {
+  const { language } = useLanguage();
+  const skillCategories = skillCategoriesByLanguage[language];
   const [selectedCategory, setSelectedCategory] = useState(skillCategories[0]?.category);
   const selectedSkill = skillCategories.find((category) => category.category === selectedCategory) ?? skillCategories[0];
   const selectedIndex = skillCategories.findIndex((category) => category.category === selectedSkill.category);
@@ -23,7 +26,7 @@ export function SkillsSection() {
       <div className="container interactive-section">
         <SectionTitle
           eyebrow="Capabilities"
-          title="핵심 역량"
+          title={language === "EN" ? "Core Capabilities" : "핵심 역량"}
           description="Backend · Infra · UI · 3D/AI · Team"
         />
         <div className="capability-grid">

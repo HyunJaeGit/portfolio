@@ -1,4 +1,5 @@
 import type { Experience } from "../types/experience";
+import type { Language } from "../types/language";
 
 export const experiences: Experience[] = [
   {
@@ -25,3 +26,32 @@ export const experiences: Experience[] = [
     descriptions: ["Facebook 커뮤니티 개설 및 운영", "콘텐츠 및 일정 관리", "외부 협업 경험"],
   },
 ];
+
+export const experiencesByLanguage: Record<Language, Experience[]> = {
+  KR: experiences,
+  EN: [
+    {
+      organization: "Korea Institute of Geoscience and Mineral Resources",
+      role: "Research Support",
+      period: "2021.06 ~ 2021.08",
+      descriptions: ["Organized lab samples and research materials", "Supported internal research workflows", "Handled records, documents, and data management"],
+    },
+    {
+      organization: "Samsung Life Insurance",
+      role: "SFP Financial Consultant",
+      period: "2019.02 ~ 2019.09",
+      descriptions: ["Customer consultation", "Contract document management", "Customer data organization"],
+    },
+    {
+      organization: "Dong-A University Student Council",
+      role: "Chief Audit Committee Chair",
+      period: "2018.04 ~ 2018.12",
+      descriptions: ["Reviewed student council budgets", "Prepared audit reports", "Coordinated committee operations"],
+    },
+    {
+      organization: "Busan Basketball Community",
+      role: "Community Operator, 1,200 members",
+      descriptions: ["Launched and operated a Facebook community", "Managed content and schedules", "Worked with external partners"],
+    },
+  ],
+};
