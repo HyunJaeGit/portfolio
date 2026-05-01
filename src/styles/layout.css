@@ -1,0 +1,127 @@
+.container {
+  width: min(100% - 2.5rem, 74rem);
+  margin: 0 auto;
+}
+
+.section {
+  scroll-margin-top: var(--header-total-height);
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.page-shell--center {
+  display: grid;
+  place-items: center;
+}
+
+.empty-state {
+  display: grid;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.global-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: var(--header-height);
+  border-bottom: 1px solid var(--color-card-border);
+  background: var(--color-header);
+  backdrop-filter: blur(1.25rem) saturate(145%);
+  box-shadow: var(--shadow-header);
+}
+
+.global-header__inner {
+  display: flex;
+  min-height: var(--header-height);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.global-header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-primary);
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.global-header__logo-mark {
+  display: inline-grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid var(--color-card-border);
+  border-radius: 0.8rem;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  letter-spacing: 0;
+}
+
+.global-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.sub-navigation {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 19;
+  border-bottom: 1px solid var(--color-card-border);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  backdrop-filter: blur(1.25rem);
+}
+
+.sub-navigation__inner {
+  display: flex;
+  min-height: var(--sub-navigation-height);
+  align-items: center;
+  gap: var(--space-2);
+  overflow-x: auto;
+}
+
+.sub-navigation__link {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 0.45rem var(--space-3);
+  font-size: var(--font-size-sm);
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+
+.sub-navigation__link:hover {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 720px) {
+  .global-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: var(--space-3) 0;
+  }
+
+  .global-header__actions {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

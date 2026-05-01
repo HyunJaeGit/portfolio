@@ -1,0 +1,157 @@
+.button,
+.toggle-button {
+  display: inline-flex;
+  min-height: 2.45rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.button:hover,
+.toggle-button:hover {
+  transform: translateY(-2px);
+}
+
+.button--md {
+  padding: 0 var(--space-5);
+}
+
+.button--sm {
+  min-height: 2.25rem;
+  padding: 0 var(--space-3);
+  font-size: var(--font-size-sm);
+}
+
+.button--primary {
+  background: var(--color-accent);
+  color: #17120a;
+  box-shadow: 0 0.65rem 1.4rem rgb(228 180 95 / 18%);
+}
+
+.button--primary:hover {
+  background: var(--color-accent-strong);
+}
+
+.button--secondary {
+  border-color: var(--color-card-border);
+  background: color-mix(in srgb, var(--color-card) 82%, transparent);
+  color: var(--color-text-primary);
+}
+
+.button--secondary:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 38%, var(--color-card-border));
+  background: var(--color-hover);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--color-accent);
+}
+
+.button--ghost:hover {
+  background: var(--color-hover);
+}
+
+.card {
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 3%), transparent 42%),
+    var(--color-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4);
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.card:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-card-border));
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.badge {
+  display: inline-flex;
+  min-height: 1.7rem;
+  align-items: center;
+  border: 1px solid var(--color-card-border);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 4%);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 650;
+  padding: 0 var(--space-2);
+}
+
+.clean-list li::marker,
+.certification-list li::marker {
+  color: var(--color-accent);
+}
+
+.section-title {
+  display: grid;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.section-title__eyebrow {
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.section-title__heading {
+  color: var(--color-text-primary);
+  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+  line-height: 1.18;
+}
+
+.section-title__description {
+  max-width: 42rem;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+}
+
+.segmented-control {
+  display: inline-flex;
+  overflow: hidden;
+  border: 1px solid var(--color-card-border);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 3%);
+}
+
+.segmented-control .toggle-button {
+  border: 0;
+  border-radius: 0;
+}
+
+.toggle-button {
+  min-width: 3rem;
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.toggle-button--active {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 560px) {
+  .button {
+    width: auto;
+  }
+}
