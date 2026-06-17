@@ -4,7 +4,7 @@ import { useLocalStorage } from "./useLocalStorage";
 export type Theme = "dark" | "light";
 
 export function useTheme() {
-  const [theme, setTheme] = useLocalStorage<Theme>("portfolio-theme", "dark");
+  const [theme, setTheme] = useLocalStorage<Theme>("portfolio-theme", "light");
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
